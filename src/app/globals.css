@@ -1,15 +1,29 @@
 /* src/app/globals.css */
+@import "tailwindcss";
+
+@theme {
+  --color-brand-plum: #5a2a5f;
+  --color-brand-coral: #ff6b6b;
+  --color-brand-blush: #f4d7e1;
+  --color-brand-bg: #fff9fb;
+  
+  --font-serif: "Playfair Display", serif;
+}
+
 @layer base {
   :root {
-    /* Brand Colors (From Figma) */
-    --brand-plum: 300 39% 27%;   /* #5A2A5F */
-    --brand-coral: 0 100% 71%;    /* #FF6B6B */
-    --brand-blush: 337 53% 93%;   /* #F4D7E1 */
-    
-    /* Shadcn Overrides */
-    --primary: var(--brand-plum);
-    --accent: var(--brand-coral);
     --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --primary: 293 39% 27%; /* #5A2A5F */
+    --accent: 0 100% 71%;    /* #FF6B6B */
     --radius: 1.5rem;
+  }
+
+  body {
+    @apply bg-[#FFF9FB] text-slate-900 antialiased;
+  }
+
+  .serif-font {
+    font-family: var(--font-serif);
   }
 }
